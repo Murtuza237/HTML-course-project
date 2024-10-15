@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <header>
+        <div class="Header">
+            <div class="logo">
+                <h1>Career Counselling</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parents.html">Parents</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="mentor.html">Mentorship</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Career Interest Assessment</h2>
+            <p>Answer the questions below to discover your ideal career paths based on your interests and strengths.</p>
+        </div>
+    </section>
+
+    <section class="assessment-form">
+        <div class="container">
+            <form id="careerForm">
+                <h3>Choose your interests:</h3>
+                <label>
+                    <input type="checkbox" name="interest" value="Technology"> Technology
+                </label><br>
+                <label>
+                    <input type="checkbox" name="interest" value="Arts"> Arts
+                </label><br>
+                <label>
+                    <input type="checkbox" name="interest" value="Business"> Business
+                </label><br>
+                <label>
+                    <input type="checkbox" name="interest" value="Science"> Science
+                </label><br>
+                <label>
+                    <input type="checkbox" name="interest" value="Healthcare"> Healthcare
+                </label><br>
+                <label>
+                    <input type="checkbox" name="interest" value="Education"> Education
+                </label><br>
+                <label>
+                    <input type="checkbox" name="interest" value="Law"> Law
+                </label><br>
+                
+                <h3>Which activities do you enjoy the most?</h3>
+                <label>
+                    <input type="checkbox" name="activity" value="Problem Solving"> Problem Solving
+                </label><br>
+                <label>
+                    <input type="checkbox" name="activity" value="Creative Thinking"> Creative Thinking
+                </label><br>
+                <label>
+                    <input type="checkbox" name="activity" value="Managing People"> Managing People
+                </label><br>
+                <label>
+                    <input type="checkbox" name="activity" value="Helping Others"> Helping Others
+                </label><br>
+
+                <h3>Your ideal work environment:</h3>
+                <label>
+                    <input type="radio" name="environment" value="Office" required> Office
+                </label><br>
+                <label>
+                    <input type="radio" name="environment" value="Remote"> Remote
+                </label><br>
+                <label>
+                    <input type="radio" name="environment" value="Outdoor"> Outdoor
+                </label><br>
+
+                <input type="submit" class="cta-btn" value="Submit Assessment">
+            </form>
+        </div>
+    </section>
+
+    <script>document.getElementById('careerForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        // Get form data
+        const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked')).map(checkbox => checkbox.value);
+        const activities = Array.from(document.querySelectorAll('input[name="activity"]:checked')).map(checkbox => checkbox.value);
+        const environment = document.querySelector('input[name="environment"]:checked').value;
+    
+        // Create recommendations based on the user's selections
+        let recommendations = [];
+    
+        if (interests.includes('Technology')) {
+            recommendations.push('Software Developer', 'Data Scientist', 'AI Specialist');
+        }
+        if (interests.includes('Arts')) {
+            recommendations.push('Graphic Designer', 'Illustrator', 'Music Producer');
+        }
+        if (activities.includes('Creative Thinking')) {
+            recommendations.push('Marketing Manager', 'Content Creator');
+        }
+        if (environment === 'Outdoor') {
+            recommendations.push('Wildlife Photographer', 'Environmental Scientist');
+        }
+        
+        // Store recommendations in localStorage to pass to the recommendations page
+        localStorage.setItem('recommendations', JSON.stringify(recommendations));
+    
+        // Redirect to recommendations page
+        window.location.href = 'recommendations.html';
+    });
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CareerCounsel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+.logo h1 {
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.logo
+{
+    position: relative;
+    padding-left:20px;
+    margin-right: auto;
+}
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position:relative;
+    background: skyblue;
+    opacity: 0.9;
+    width:100%;
+    height: 60px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 15px;
+    height: 100%;
+    color:white;
+    font-size: 22px;
+}
+
+ul li a{
+    text-decoration: none;
+    color:white;
+}
+ul li a:hover{
+    color:darkblue;
+}
+
+.login-btn {
+    background-color: #2980b9;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background-color: #1f6aa5;
+}
+
+.page-header {
+    background:darkblue;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    font-size: 18px;
+}
+
+.content {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.cta-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #1f6aa5;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin-bottom:0px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.recommendations h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.recommendations ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.recommendations li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+

@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: white;
+}
+
+.logo
+{
+    position: relative;
+    padding-left:20px;
+    margin-right: auto;
+}
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position:relative;
+    background: skyblue;
+    opacity: 0.9;
+    width:100%;
+    height: 70px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 15px;
+    height: 100%;
+    color:white;
+    font-size: 22px;
+}
+
+ul li a{
+    text-decoration: none;
+    color:white;
+}
+ul li a:hover{
+    color:darkblue;
+}
+
+.hero {
+    background: url('https://whatfix.com/blog/wp-content/uploads/2022/12/digital-transformation-3.jpg') no-repeat center center/cover;
+    color: white;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #1f6aa5;
+}
+
+.features {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.features h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card h4 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: skyblue;
+}
+
+.card p {
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-icon {
+    width: 40px;    /* Adjust the size of the icon */
+    height: 40px;
+    border-radius: 50%;  /* Makes the icon circular */
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;   /* Adjust spacing between items */
+}
+
+.nav-links img {
+    display: inline-block;
+    margin-left: 15px;    /* Adds space between other links and the icon */
+}
