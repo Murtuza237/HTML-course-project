@@ -24,8 +24,6 @@ body {
     padding-left:20px;
     margin-right: auto;
 }
-
-/* Header Styles */
 .Header{
     display: flex;
     align-items: center;
@@ -55,16 +53,6 @@ ul li a{
 }
 ul li a:hover{
     color:darkblue;
-}
-.login-btn {
-    background-color: #2980b9;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-.login-btn:hover {
-    background-color: white;
-    color:black;
 }
 
 /* Page Heading */
@@ -132,4 +120,23 @@ footer {
     padding: 20px;
     background-color: #2980b9;
     color: white;
+}
+
+.profile-icon {
+    width: 45px;    
+    height: 45px;
+    border-radius: 50%; 
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    right:20px
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links img {
+    display: inline-block;
+    margin-left: 15px;    
 }

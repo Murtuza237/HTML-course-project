@@ -18,15 +18,6 @@ body {
     color: white;
 }
 
-/* Header Styles */
-header {
-    background-color: skyblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-}
-
 .logo
 {
     position: relative;
@@ -62,16 +53,6 @@ ul li a{
 }
 ul li a:hover{
     color:darkblue;
-}
-.login-btn {
-    background-color: #2980b9;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-.login-btn:hover {
-    background-color: white;
-    color:black;
 }
 
 /* Main Content Styles */
@@ -185,4 +166,23 @@ footer {
     100% {
         transform: translateX(-200%);
     }
+}
+
+.profile-icon {
+    width: 45px;    
+    height: 45px;
+    border-radius: 50%; 
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    right:20px
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links img {
+    display: inline-block;
+    margin-left: 15px;    
 }

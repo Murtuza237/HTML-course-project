@@ -145,19 +145,20 @@ footer {
 }
 
 .profile-icon {
-    width: 40px;    /* Adjust the size of the icon */
-    height: 40px;
-    border-radius: 50%;  /* Makes the icon circular */
+    width: 45px;    
+    height: 45px;
+    border-radius: 50%; 
     cursor: pointer;
     vertical-align: middle;
+    position: relative;
+    right:20px
 }
 
 .nav-links li {
     display: inline-block;
-    margin-right: 20px;   /* Adjust spacing between items */
 }
 
 .nav-links img {
     display: inline-block;
-    margin-left: 15px;    /* Adds space between other links and the icon */
+    margin-left: 15px;    
 }
