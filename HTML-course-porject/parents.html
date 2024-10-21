@@ -105,7 +105,73 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <!-- Progress Section -->
+    <section class="progress-section">
+        <div class="container">
+            <h3>Child's Progress Overview</h3>
+            
+            <!-- Interest Distribution Pie Chart -->
+            <div class="chart-container" style="width: 50%; margin: 0 auto;">
+                <h4>Interest Distribution</h4>
+                <canvas id="interestsChart"></canvas>
+            </div>
+            
+            <!-- Hobbies Progress Bar Chart -->
+            <div class="chart-container" style="width: 50%; margin: 0 auto;">
+                <h4>Hobbies Progress</h4>
+                <canvas id="hobbiesChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Interest Distribution Pie Chart
+        const interestsCtx = document.getElementById('interestsChart').getContext('2d');
+        const interestsChart = new Chart(interestsCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Technology', 'Arts', 'Science', 'Sports', 'Music'],
+                datasets: [{
+                    label: 'Child Interests',
+                    data: [30, 20, 25, 15, 10], // Sample data, you can replace it with actual data
+                    backgroundColor: ['#2980b9', '#e74c3c', '#27ae60', '#f1c40f', '#8e44ad'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    
+        // Hobbies Progress Bar Chart
+        const hobbiesCtx = document.getElementById('hobbiesChart').getContext('2d');
+        const hobbiesChart = new Chart(hobbiesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Coding', 'Painting', 'Sports', 'Music', 'Reading'],
+                datasets: [{
+                    label: 'Progress (%)',
+                    data: [85, 70, 50, 60, 75], // Sample data, you can replace it with actual data
+                    backgroundColor: '#3498db'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+    
     <!-- Footer -->
     <footer>
         <p>© 2024 Career Counselling. All Rights Reserved.</p>

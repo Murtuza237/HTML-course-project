@@ -14,12 +14,17 @@
                 <h1>Career Counselling</h1>
             </div>
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="parents.html">Parents</a></li>
                     <li><a href="career.html">Careers</a></li>
                     <li><a href="mentor.html">Mentorship</a></li>
-                    <li><a href="profile.html"><img src="profile.jpeg" alt="Profile" class="profile-icon"></a></li>
+                    <!-- Profile Icon will be dynamically replaced based on login status -->
+                    <li id="auth-section">
+                        <a href="profile.html">
+                            <img src="profile.jpeg" alt="Profile" class="profile-icon">
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -33,16 +38,18 @@
                 <h2>John Doe</h2>
                 <p>Class 12 | Age: 17</p>
             </div>
-
+    
             <div class="profile-details">
                 <h3>Profile Details</h3>
                 <p><strong>Interests:</strong> Technology, Business, Creative Thinking</p>
                 <p><strong>Skills:</strong> Problem Solving, Leadership, Coding</p>
                 <p><strong>Current Goals:</strong> Explore career options in tech and business.</p>
-                <a href="#" class="cta-btn">Edit Profile</a>
+                <!-- Logout Button -->
+                <button id="logout-btn" class="cta-btn">Logout</button>
             </div>
         </div>
     </section>
+    
 
     <!-- Footer Section -->
     <footer>
@@ -50,5 +57,44 @@
             <p>&copy; 2024 CareerCounsel. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>document.addEventListener('DOMContentLoaded', function () {
+    // Function to check login status
+    function checkLoginStatus() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const authSection = document.getElementById('auth-section');
+
+        // Clear any existing content
+        authSection.innerHTML = '';
+
+        if (isLoggedIn) {
+            // User is logged in, show profile icon
+            authSection.innerHTML = `
+                <a href="profile.html">
+                    <img src="profile.jpeg" alt="Profile Icon" class="profile-icon">
+                </a>
+            `;
+        } else {
+            // User is not logged in, show login button
+            authSection.innerHTML = `
+                <a href="login.html" class="login-btn">Login</a>
+            `;
+        }
+    }
+
+    // Logout functionality
+    const logoutButton = document.getElementById('logout-btn');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function () {
+            // Set login status to false
+            localStorage.setItem('isLoggedIn', 'false');
+            // Redirect to the home page or login page
+            window.location.href = 'index.html';
+        });
+    }
+
+    // Call the checkLoginStatus function to update navigation on page load
+    checkLoginStatus();
+});</script>
 </body>
 </html>

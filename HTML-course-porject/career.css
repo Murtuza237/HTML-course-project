@@ -150,3 +150,15 @@ h1 {
     display: inline-block;
     margin-left: 15px;    
 }
+
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    height: 70px;
+}

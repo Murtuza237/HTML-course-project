@@ -144,21 +144,24 @@ footer {
     margin-top: 50px;
 }
 
+
+/* Profile Icon */
 .profile-icon {
-    width: 45px;    
-    height: 45px;
-    border-radius: 50%; 
-    cursor: pointer;
-    vertical-align: middle;
-    position: relative;
-    right:20px
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.nav-links li {
-    display: inline-block;
+/* Login Button */
+.login-btn {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-.nav-links img {
-    display: inline-block;
-    margin-left: 15px;    
+.login-btn:hover {
+    background-color: #3498db;
 }
